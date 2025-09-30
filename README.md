@@ -42,7 +42,7 @@ Z = \frac{\sqrt{2} \cdot V_\text{RMS}[V]}{I_\text{drive}} - R_\text{series}
 3. Run the script:
 
    ```bash
-   python impedance_check.py
+   python cyton_impedance_check.py
    ```
 
 4. Example output:
