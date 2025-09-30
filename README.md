@@ -23,6 +23,7 @@ Z = (sqrt(2) * Vrms[V]) / I_drive - R_series
 
 ```
 
+```
 - I_drive = 6 nA  
 - R_series = 2.2 kΩ  
 ```
