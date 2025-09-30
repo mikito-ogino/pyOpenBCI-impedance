@@ -31,3 +31,52 @@ Z = \frac{\sqrt{2} \cdot V_\text{RMS}[V]}{I_\text{drive}} - R_\text{series}
 1. Install dependencies:
    ```bash
    pip install brainflow numpy scipy matplotlib
+````
+
+2. Connect your **OpenBCI Cyton** via USB and adjust the `serial_port` in `check_impedance()`:
+
+   ```python
+   port = "/dev/cu.usbserial-XXXX"  # Change to match your environment
+   ```
+
+3. Run the script:
+
+   ```bash
+   python impedance_check.py
+   ```
+
+4. Example output:
+
+   ```
+   CH1(gray): 5.12 kΩ
+   CH2(purple): 12.45 kΩ
+   ...
+   === Summary ===
+   CH1(gray): 5.12 kΩ
+   CH2(purple): 12.45 kΩ
+   ```
+
+---
+
+## 📊 Notes
+
+* Measurement duration is set to **2 seconds**, with the last **1 second** used for RMS calculation.
+* Settling time before measurement is **2 seconds** to avoid transient artifacts.
+* Works with the default **8-channel Cyton Board** configuration.
+
+---
+
+## 📜 License
+
+MIT License (feel free to modify for your needs).
+
+---
+
+## 🙌 Acknowledgements
+
+* [OpenBCI](https://openbci.com/) for hardware and GUI reference
+* [BrainFlow](https://brainflow.org/) for Python interface
+
+```
+
+---
