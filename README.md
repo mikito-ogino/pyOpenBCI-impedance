@@ -17,12 +17,15 @@ It reproduces the impedance check function of the official OpenBCI GUI and yield
 ## 🧮 Impedance Calculation
 The impedance is calculated using the same formula as the OpenBCI GUI:
 
-\[
-Z = \frac{\sqrt{2} \cdot V_\text{RMS}[V]}{I_\text{drive}} - R_\text{series}
-\]
+```
 
-- \( I_\text{drive} = 6 \,\text{nA} \)  
-- \( R_\text{series} = 2.2 \,\text{kΩ} \)  
+Z = (sqrt(2) * Vrms[V]) / I_drive - R_series
+
+```
+
+- I_drive = 6 nA  
+- R_series = 2.2 kΩ  
+```
 
 ---
 
