@@ -1,19 +1,33 @@
+# OpenBCI Cyton Impedance Check (Python)
+
+This repository provides a **Python implementation of an impedance check tool for the OpenBCI Cyton Board**, developed using [BrainFlow](https://brainflow.org/).  
+It reproduces the impedance check function of the official OpenBCI GUI and yields almost identical results when using a **5–50 Hz bandpass filter**.
 
 ---
 
-# 🔖 Suggested Repository Metadata
-
-- **Name**: `openbci-cyton-impedance-check`  
-- **Description**:  
-  `Python implementation of an impedance check tool for OpenBCI Cyton Board, validated against OpenBCI GUI (5–50 Hz bandpass).`
-
----
-
-# 🐦 Twitter/X Promotion (English)
-
-- “Released a Python implementation of impedance check for the OpenBCI Cyton Board! Matches the GUI results (5–50 Hz bandpass) and makes electrode quality evaluation easier. Repo here 👉 [link] #OpenBCI #BCI #Neurotech”  
-- “Want to check electrode impedance on OpenBCI Cyton without the GUI? I built a Python tool that reproduces the same measurements (5–50 Hz bandpass). Open source repo 👉 [link] #EEG #Neurotech”  
+## ✨ Features
+- Performs **per-channel impedance measurement** on the Cyton board.
+- Uses **lead-off detection (6 nA current)** and calculates impedance following the same formula as OpenBCI GUI.
+- Bandpass filtering (5–50 Hz) for stable measurement.
+- Color-coded output by electrode cable for quick identification.
+- Reset function to restore ADS1299 registers to default values after measurement.
 
 ---
 
-Would you also like me to prepare a **shorter “Quick Start” version** of the README for GitHub front page (with badges etc.), or do you prefer keeping it research-style and technical?
+## 🧮 Impedance Calculation
+The impedance is calculated using the same formula as the OpenBCI GUI:
+
+\[
+Z = \frac{\sqrt{2} \cdot V_\text{RMS}[V]}{I_\text{drive}} - R_\text{series}
+\]
+
+- \( I_\text{drive} = 6 \,\text{nA} \)  
+- \( R_\text{series} = 2.2 \,\text{kΩ} \)  
+
+---
+
+## 🚀 Usage
+
+1. Install dependencies:
+   ```bash
+   pip install brainflow numpy scipy matplotlib
