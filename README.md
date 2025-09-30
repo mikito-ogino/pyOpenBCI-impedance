@@ -31,7 +31,7 @@ Z = \frac{\sqrt{2} \cdot V_\text{RMS}[V]}{I_\text{drive}} - R_\text{series}
 1. Install dependencies:
    ```bash
    pip install brainflow numpy scipy matplotlib
-````
+   ```
 
 2. Connect your **OpenBCI Cyton** via USB and adjust the `serial_port` in `check_impedance()`:
 
@@ -77,6 +77,5 @@ MIT License (feel free to modify for your needs).
 * [OpenBCI](https://openbci.com/) for hardware and GUI reference
 * [BrainFlow](https://brainflow.org/) for Python interface
 
-```
 
 ---
