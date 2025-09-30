@@ -99,7 +99,7 @@ def check_impedance(channels=[1,2,3,4,5,6,7,8]):
     7) Convert to impedance (kΩ).
     8) Print result and restore channel to default.
     """
-    port = "/dev/cu.usbserial-DP04WG3L"  # Adjust according to your environment
+    port = "/dev/cu.usbserial-XXXX"  # Adjust according to your environment
     if not port:
         raise RuntimeError("Cyton serial port not found.")
 
