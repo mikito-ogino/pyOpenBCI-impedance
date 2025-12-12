@@ -54,7 +54,7 @@ def calc_impedance_from_vrms(vrms_uV):
     Vrms_V = float(vrms_uV) * 1e-6
     Z = (np.sqrt(2.0) * Vrms_V) / I_DRIVE
     Z -= SERIES_R
-    return max(Z, 0.0)   # Impedance cannot be negative
+    return abs(Z)   # Impedance cannot be negative
 
 def take_recent_1s(x_uV, fs):
     """
