@@ -52,12 +52,10 @@ Z = (sqrt(2) * Vrms[V]) / I_drive - R_series
 4. Example output:
 
    ```
-   CH1(gray): 5.12 kΩ
-   CH2(purple): 12.45 kΩ
-   ...
-   === Summary ===
-   CH1(gray): 5.12 kΩ
-   CH2(purple): 12.45 kΩ
+   Checking impedance for Channel 1...
+   Ch1 Cmd: x1000100Xz101Z | Resp: Success: Channel set for 1$$$ccess: Lead off set for 1$$$
+   Ch1 Cmd: x1060110Xz100Z | Resp: 
+   Channel 1: 5338.04 kΩ
    ```
 
 ---
