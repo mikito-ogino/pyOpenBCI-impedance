@@ -62,8 +62,7 @@ Z = (sqrt(2) * Vrms[V]) / I_drive - R_series
 
 ## 📊 Notes
 
-* Measurement duration is set to **2 seconds**, with the last **1 second** used for RMS calculation.
-* Settling time before measurement is **2 seconds** to avoid transient artifacts.
+* Measurement duration is set to **6 seconds**, with the last **1 second** used for RMS calculation.
 * Works with the default **8-channel Cyton Board** configuration.
 
 ---
